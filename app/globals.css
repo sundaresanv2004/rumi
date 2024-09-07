@@ -63,6 +63,21 @@
   }
 }
 
+.red__gradient {
+  background: linear-gradient(180deg, rgba(255, 0, 0, 0) 0%, #ff0000 100%);
+  filter: blur(123px);
+}
+
+.yellow__gradient {
+  background: linear-gradient(90deg, #fff700 0%, #ffef00 100%);
+  filter: blur(900px);
+}
+
+.green__gradient {
+  background: rgba(0, 255, 0, 0.6);
+  filter: blur(750px);
+}
+
 
 @layer base {
   * {
