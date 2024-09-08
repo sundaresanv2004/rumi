@@ -18,7 +18,7 @@ import { components, enquiry_nav } from '@/constants';
 
 const NavBar = () => {
     return (
-        <header className="fixed top-0 flex h-16 items-center gap-4 border-b bg-background px-16 w-screen z-50 ">
+        <header className="fixed top-0 flex h-16 items-center gap-4 border-b bg-background px-20 w-screen z-50 ">
             <nav
                 className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
                 <Link
@@ -81,7 +81,9 @@ const NavBar = () => {
 
             <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
                 <div className="ml-auto flex-1 sm:flex-initial"></div>
-                <Button variant='ghost'>Login</Button>
+                <Link href="/auth/login">
+                    <Button variant='ghost'>Login</Button>
+                </Link>
                 <Button className={'mr-6'} variant={'default'}>Sign In</Button>
             </div>
         </header>

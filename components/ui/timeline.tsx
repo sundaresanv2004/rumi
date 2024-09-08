@@ -34,11 +34,11 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
+      className="w-full bg-white dark:bg-neutral-950 md:px-10"
       ref={containerRef}
     >
-      <div className="mx-auto pt-5 md:px-8 font-semibold">
-        <h2 className="text-lg md:text-4xl text-black dark:text-white max-w-4xl">
+      <div className="mx-auto pt-5 md:px-8">
+        <h2 className="text-lg md:text-4xl text-black dark:text-white max-w-4xl font-bold">
           Why Choose Us?
         </h2>
         {/*<p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">*/}
