@@ -84,7 +84,9 @@ const NavBar = () => {
                 <Link href="/auth/login">
                     <Button variant='ghost'>Login</Button>
                 </Link>
-                <Button className={'mr-6'} variant={'default'}>Sign In</Button>
+                <Link href="/auth/signup">
+                    <Button className={'mr-6'} variant={'default'}>Sign Up</Button>
+                </Link>
             </div>
         </header>
 )}

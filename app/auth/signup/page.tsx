@@ -54,7 +54,7 @@ const SignUp = () => {
                             <Input id="password" type="password" required/>
                         </div>
                         <Button type="submit" className="w-full">
-                            Login
+                            Sign Up
                         </Button>
                         <Separator className={"my-5"}/>
                         <Button variant="outline" className="w-full gap-x-2">

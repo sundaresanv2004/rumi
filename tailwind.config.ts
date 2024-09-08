@@ -1,6 +1,5 @@
 import type { Config } from "tailwindcss";
 import {fontFamily} from "tailwindcss/defaultTheme";
-import {Open_Sans} from "next/font/google";
 
 const config: Config = {
     darkMode: ["class"],
@@ -12,6 +11,7 @@ const config: Config = {
   theme: {
   	extend: {
   		colors: {
+			dark_blue: '#12141C',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
