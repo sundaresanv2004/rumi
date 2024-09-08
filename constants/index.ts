@@ -1,110 +1,125 @@
+export const certificates: { title: string; href: string; description: string }[] = [
+    {
+        title: "Full-Stack Developer",
+        href: "/certificates/full-stack-developer",
+        description:
+            "Prove your ability to handle both front-end and back-end development tasks efficiently.",
+    },
+    {
+        title: "DevOps Practitioner",
+        href: "/certificates/devops-practitioner",
+        description:
+            "Get certified in DevOps methodologies, including CI/CD and automated deployments.",
+    },
+    {
+        title: "AI Specialist",
+        href: "/certificates/ai-specialist",
+        description:
+            "Showcase your skills in artificial intelligence and machine learning technologies.",
+    },
+    {
+        title: "Deep Learning Expert",
+        href: "/certificates/deep-learning-expert",
+        description:
+            "Demonstrate your proficiency in advanced deep learning architectures and techniques.",
+    },
+
+];
 
 
-export const enquiry_nav: { title: string; href: string; }[] = [
+export const courses: { title: string; href: string; description: string }[] = [
     {
-        title: "ENQUIRY ENTRY",
-        href: "/enquiry/enquiry_entry",
+        title: "Frontend Foundations",
+        href: "/courses/frontend-foundations",
+        description:
+            "Master the art of building responsive and interactive websites using HTML, CSS, and JavaScript.",
     },
     {
-        title: "ENQ.SUPP.ENTRY",
-        href: "/enquiry/enq_supp_entry",
+        title: "Backend Engineering",
+        href: "/courses/backend-engineering",
+        description:
+            "Learn the essentials of server-side development, databases, and building scalable back-end systems.",
     },
     {
-        title: "ENQ.LIST",
-        href: "/docs/primitives/progress",
+        title: "AI Mission Control",
+        href: "/courses/ai-mission",
+        description:
+            "Embark on an AI adventure where you’ll explore machine learning, neural networks, and real-world AI applications.",
     },
     {
-        title: "ENQ.LIST",
-        href: "/docs/primitives/scroll-area",
+        title: "Deep Learning Dive",
+        href: "/courses/deep-learning-dive",
+        description: "Delve into deep learning concepts, architectures like CNNs and RNNs, and hands-on projects.",
     },
     {
-        title: "ENQ.STA.LIST",
-        href: "/docs/primitives/tabs",
+        title: "Mastering TensorFlow",
+        href: "/courses/tensorflow-master",
+        description:
+            "Harness the power of TensorFlow to build machine learning models with ease and efficiency.",
     },
     {
-        title: "QUOTATION",
-        href: "/docs/primitives/tooltip",
+        title: "Modern Frameworks Unleashed",
+        href: "/courses/frameworks-unleashed",
+        description:
+            "Get to grips with the most popular web frameworks like React, Angular, and Vue to build dynamic web applications.",
     },
     {
-        title: "NEW QUOTATION",
-        href: "/docs/primitives/tooltip",
-    },
-    {
-        title: "TTS ENTRY(GST)",
-        href: "/docs/primitives/tooltip",
-    },
-    {
-        title: "TTS PRICING",
-        href: "/docs/primitives/tooltip",
-    },
-    {
-        title: "TTS RANKING(CS)",
-        href: "/docs/primitives/tooltip",
-    },
-    {
-        title: "HEADER/FOOTER",
-        href: "/enquiry/header_footer",
-    },
-    {
-        title: "TTS PRINTING",
-        href: "/docs/primitives/tooltip",
-    },
-    {
-        title: "IMPAL, MAS-PRT",
-        href: "/docs/primitives/tooltip",
-    },
-    {
-        title: "ENQ.DUPLICATION",
-        href: "/enquiry/header_footer",
-    },
-    {
-        title: "TTS.DUPLICATION",
-        href: "/enquiry/header_footer",
-    },
-    {
-        title: "TTS RANKING(DS)",
-        href: "/enquiry/header_footer",
-    },
-    {
-        title: "TTS PRINT(OLD)",
-        href: "/enquiry/header_footer",
+        title: "DevOps Essentials",
+        href: "/courses/devops-essentials",
+        description:
+            "Explore the tools and techniques behind continuous integration, deployment, and monitoring in modern development workflows.",
     },
 ]
 
-export const components: { title: string; href: string; description: string }[] = [
+export const learningResources: { title: string; href: string; description: string; pro: boolean }[] = [
     {
-        title: "Alert Dialog",
-        href: "/docs/primitives/alert-dialog",
+        title: "Free Courses",
+        href: "/resources/free-ai-courses",
         description:
-            "A modal dialog that interrupts the user with important content and expects a response.",
+            "Access a collection of free courses to get started with artificial intelligence and machine learning.",
+        pro: false
     },
     {
-        title: "Hover Card",
-        href: "/docs/primitives/hover-card",
+        title: "Interactive Quizzes",
+        href: "/resources/interactive-quizzes",
         description:
-            "For sighted users to preview content available behind a link.",
+            "Test your knowledge with engaging quizzes on various topics including AI, programming, and web development.",
+        pro: false
     },
     {
-        title: "Progress",
-        href: "/docs/primitives/progress",
+        title: "Certification Prep Guides",
+        href: "/resources/certification-prep",
         description:
-            "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+            "Find comprehensive guides and practice materials to help you prepare for certification exams in tech fields.",
+        pro: true
     },
     {
-        title: "Scroll-area",
-        href: "/docs/primitives/scroll-area",
-        description: "Visually or semantically separates content.",
-    },
-    {
-        title: "Tabs",
-        href: "/docs/primitives/tabs",
+        title: "AI Chatbot Assistant",
+        href: "/resources/ai-chatbot",
         description:
-            "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+            "Interact with an AI chatbot for instant help and guidance on your learning journey.",
+        pro: true
     },
     {
-        title: "Tooltip",
-        href: "/docs/primitives/tooltip",
+        title: "AI Guidance and Roadmaps",
+        href: "/resources/ai-guidance-roadmaps",
         description:
-            "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+            "Explore structured roadmaps and expert guidance to navigate your learning path in AI and machine learning.",
+        pro: false
     },
-]
+    {
+        title: "Online Code Editor",
+        href: "/resources/online-code-editor",
+        description:
+            "Write, test, and debug code directly in your browser with our easy-to-use online code editor.",
+        pro: false
+    },
+    {
+        title: "Free Tutorials and Guides",
+        href: "/resources/free-tutorials",
+        description:
+            "Access a wide range of free tutorials and guides on various programming languages and technologies.",
+        pro: false
+    },
+];
+

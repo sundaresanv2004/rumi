@@ -1,31 +1,39 @@
-import styles from "@/app/styles";
-import {NavBar, Hero, FeaturesSection, Footer, IconCloudDemo} from "@/components/shared";
+import {
+    NavBar,
+    Hero,
+    FeaturesSection,
+    Footer,
+    Courses,
+    TrendCard,
+    CourseStats,
+    IconCloud,
+    CareerCoursesClient,
+    Testimonial,
+} from "@/components/shared";
 
 
 export default function Home() {
   return (
       <div className="w-full overflow-hidden">
           <NavBar />
-
-          <div id="home" className={`mt-5 max-md:mt-20 ${styles.flexStart} h-[97vh]`}>
-              <div className={`${styles.boxWidth} pt-10`}>
-                  <Hero />
-              </div>
+          <div id={"Home"}>
+              <Hero />
           </div>
+          <div className="flex items-center justify-center px-36">
+              <CourseStats />
+          </div>
+          {/*<CareerCoursesClient />*/}
 
-          <div className={`${styles.paddingX} pt-10`}>
+          <div id={"featuresSection"}>
               <FeaturesSection />
           </div>
-
-          <div className={`${styles.paddingX} pt-10 flex w-full justify-center`}>
-              <IconCloudDemo />
+          <TrendCard />
+          <Courses />
+          <div className="flex items-center justify-center mb-10">
+              <IconCloud />
           </div>
-
-          <div className={`mt-5 max-md:mt-20 ${styles.flexStart} bg-dark_blue`}>
-              <div className={`${styles.boxWidth} pt-10`}>
-                  <Footer />
-              </div>
-          </div>
+          <Testimonial />
+          <Footer />
       </div>
   );
 }
