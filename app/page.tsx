@@ -7,17 +7,16 @@ export default function Home() {
       <div className="w-full overflow-hidden">
           <NavBar/>
 
-          <div id="home" className={`bg-dark_blue mt-5 max-md:mt-20 ${styles.flexStart} h-[97vh]`}>
+          <div id="home" className={`mt-5 max-md:mt-20 ${styles.flexStart} h-[97vh]`}>
               <div className={`${styles.boxWidth} pt-10`}>
                   <Hero/>
               </div>
           </div>
 
-          <div className={`bg-dark_blue mt-5 max-md:mt-20 ${styles.flexStart} h-[97vh]`}>
-              <div className={`${styles.boxWidth} pt-5`}>
-                  <FeaturesSection/>
-              </div>
+          <div className={`${styles.paddingX} pt-10`}>
+              <FeaturesSection />
           </div>
+
 
       </div>
   );

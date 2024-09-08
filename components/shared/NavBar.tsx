@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import * as React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { logo } from "../../public/assets"
+import { logo } from "../../public/assets";
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -12,14 +12,13 @@ import {
     NavigationMenuList,
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
 import {Button} from "@/components/ui/button";
-
-import { components, enquiry_nav } from '@/constants'
+import { components, enquiry_nav } from '@/constants';
 
 const NavBar = () => {
     return (
-        <header className="fixed top-0 flex h-16 items-center gap-4 border-b bg-background px-4 w-screen z-50 ">
+        <header className="fixed top-0 flex h-16 items-center gap-4 border-b bg-background px-16 w-screen z-50 ">
             <nav
                 className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
                 <Link
