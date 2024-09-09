@@ -4,7 +4,7 @@ import { Home, Book, FileText, Award, Settings, BarChart, ChevronLeft, ChevronRi
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
-import { logo } from "@/public/assets"
+import { logo } from "@/public/assets/images"
 import Image from "next/image";
 import {Separator} from "@/components/ui/separator";
 

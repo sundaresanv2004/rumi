@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
 import Image from "next/image"
-import { logo } from "@/public/assets"
+import { logo } from "@/public/assets/images"
 
 export default function Footer() {
     return (

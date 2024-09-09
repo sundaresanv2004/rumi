@@ -4,14 +4,15 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
-import { Card, CardContent } from "@/components/ui/card"
+import {Card, CardContent, CardDescription, CardHeader} from "@/components/ui/card"
 import { CheckCircle2 } from 'lucide-react'
 import Link from 'next/link'
+import {Separator} from "@/components/ui/separator";
 
 const questions = [
     {
         question: "What field are you most interested in?",
-        options: ["Artificial Intelligence", "Data Science", "Machine Learning", "Web Development"]
+        options: ["Artificial Intelligence", "Data Science", "Front Development", "Backend Development"],
     },
     {
         question: "What is your current level of expertise?",
@@ -38,6 +39,13 @@ const questions = [
         options: ["High School", "Bachelor's Degree", "Master's Degree", "Ph.D."]
     }
 ]
+
+const pdfPath = {
+    "Backend Development": "/assets/pdf/backend.pdf",
+    "Front Development": "/assets/pdf/frontend.pdf",
+    "Data Science": "/assets/pdf/data-analyst.pdf",
+    "Artificial Intelligence": "/assets/pdf/ai-data-scientist.pdf",
+}
 
 export default function CourseRecommender() {
     const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -67,7 +75,7 @@ export default function CourseRecommender() {
 
     if (showResults) {
         return (
-            <div className={"h-screen flex justify-center items-center"}>
+            <div className={"flex-row justify-center items-center my-10"}>
                 <motion.div
                     initial={{opacity: 0, y: 20}}
                     animate={{opacity: 1, y: 0}}
@@ -93,21 +101,35 @@ export default function CourseRecommender() {
                     </ul>
                     <p className="text-lg font-medium text-primary">We&#39;ll use this information to curate a
                         personalized learning path for you.</p>
-                    <div className="py-3">
-                        <h1 className={"text-black text-lg front-semibold"}>RoadMap</h1>
-
-
-                        <iframe src="https://research.google.com/pubs/archive/44678.pdf"
-                                width="800" height="600">
-                            
-                        </iframe>
-
-                    </div>
                     <Button className="mt-6" onClick={() => window.location.reload()}>Start Over</Button>
                     <Link href={"/dashboard"}>
                         <Button className="mt-6 ml-6">Get Started</Button>
                     </Link>
                 </motion.div>
+                <div className={"flex w-full justify-center py-10"}>
+                    <Card className={"w-2/3"}>
+                        <CardHeader>
+                            <h1 className={"text-2xl font-extrabold"}>Roadmap</h1>
+                            <CardDescription>
+                                <p>Here is your personalised roadmap.</p>
+                            </CardDescription>
+                        </CardHeader>
+                        <Separator />
+                        <CardContent>
+                            <div className="py-3">
+
+
+                                <iframe
+                                    src={`${pdfPath[answers[0]]}`}
+                                    className="w-full px-10 h-[100vh] rounded-lg"
+                                >
+                                </iframe>
+
+
+                            </div>
+                        </CardContent>
+                    </Card>
+                </div>
             </div>
         )
     }
@@ -117,7 +139,7 @@ export default function CourseRecommender() {
             <div className="max-w-7xl w-1/2 mx-auto mt-10 p-8 bg-white rounded-lg shadow-lg">
                 <Progress value={progress} className="mb-6"/>
                 <AnimatePresence mode="wait">
-                    <motion.div
+                <motion.div
                         key={currentQuestion}
                         initial={{opacity: 0, x: 50}}
                         animate={{opacity: 1, x: 0}}

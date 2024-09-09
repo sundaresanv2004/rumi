@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-import { Michael, Emily, Sarah} from '@/public/assets'
+import { Michael, Emily, Sarah} from '@/public/assets/images'
 
 const testimonials = [
     {

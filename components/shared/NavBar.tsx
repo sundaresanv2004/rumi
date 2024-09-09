@@ -4,7 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import { Menu, X, Search } from "lucide-react"
 import { cn } from "@/lib/utils"
-import {logo, certificate} from "@/public/assets"
+import {logo, certificate} from "@/public/assets/images"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"

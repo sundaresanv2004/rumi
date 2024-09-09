@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { login_logo, Google_logo, Github_logo } from "@/public/assets";
+import { login_logo, Google_logo, Github_logo } from "@/public/assets/images";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";

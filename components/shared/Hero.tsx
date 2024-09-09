@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import {hero} from "@/public/assets"
+import {hero} from "@/public/assets/images"
 import { ArrowRight, BookOpen, Brain, Sparkles } from "lucide-react"
 import Link from "next/link"
 
