@@ -6,11 +6,12 @@ import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle2 } from 'lucide-react'
+import Link from 'next/link'
 
 const questions = [
     {
         question: "What field are you most interested in?",
-        options: ["Content Creation", "Artificial Intelligence", "Data Science", "Machine Learning", "Web Development"]
+        options: ["Artificial Intelligence", "Data Science", "Machine Learning", "Web Development"]
     },
     {
         question: "What is your current level of expertise?",
@@ -22,7 +23,7 @@ const questions = [
     },
     {
         question: "How much time can you dedicate to learning per week?",
-        options: ["1-3 hours", "4-6 hours", "7-10 hours", "More than 10 hours"]
+        options: ["2-4 Weeks", "4-8 Weeks", "8-12 Weeks", "More than 12 Weeks"]
     },
     {
         question: "What is your preferred learning style?",
@@ -66,31 +67,48 @@ export default function CourseRecommender() {
 
     if (showResults) {
         return (
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="max-w-4xl mx-auto mt-10 p-8 bg-white rounded-lg shadow-lg"
-            >
-                <h2 className="text-3xl font-bold mb-6 text-primary">Thank you for completing the questionnaire!</h2>
-                <p className="text-lg mb-4">Based on your answers, we recommend courses in the following areas:</p>
-                <ul className="space-y-2 mb-6">
-                    {answers.map((answer, index) => (
-                        <motion.li
-                            key={index}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: index * 0.1 }}
-                            className="flex items-center space-x-2"
-                        >
-                            <CheckCircle2 className="text-green-500" />
-                            <span>{answer}</span>
-                        </motion.li>
-                    ))}
-                </ul>
-                <p className="text-lg font-medium text-primary">We&#39;ll use this information to curate a personalized learning path for you.</p>
-                <Button className="mt-6" onClick={() => window.location.reload()}>Start Over</Button>
-            </motion.div>
+            <div className={"h-screen flex justify-center items-center"}>
+                <motion.div
+                    initial={{opacity: 0, y: 20}}
+                    animate={{opacity: 1, y: 0}}
+                    transition={{duration: 0.5}}
+                    className="max-w-7xl mx-auto mt-10 p-8 bg-white rounded-lg shadow-lg w-2/3"
+                >
+                    <h2 className="text-3xl font-bold mb-6 text-primary">Thank you for completing the
+                        questionnaire!</h2>
+                    <p className="text-lg mb-4">Based on your answers, we recommend courses in the following areas:</p>
+                    <ul className="space-y-2 mb-6">
+                        {answers.map((answer, index) => (
+                            <motion.li
+                                key={index}
+                                initial={{opacity: 0, x: -20}}
+                                animate={{opacity: 1, x: 0}}
+                                transition={{delay: index * 0.1}}
+                                className="flex items-center space-x-2"
+                            >
+                                <CheckCircle2 className="text-green-500"/>
+                                <span>{answer}</span>
+                            </motion.li>
+                        ))}
+                    </ul>
+                    <p className="text-lg font-medium text-primary">We&#39;ll use this information to curate a
+                        personalized learning path for you.</p>
+                    <div className="py-3">
+                        <h1 className={"text-black text-lg front-semibold"}>RoadMap</h1>
+
+
+                        <iframe src="https://research.google.com/pubs/archive/44678.pdf"
+                                width="800" height="600">
+                            
+                        </iframe>
+
+                    </div>
+                    <Button className="mt-6" onClick={() => window.location.reload()}>Start Over</Button>
+                    <Link href={"/dashboard"}>
+                        <Button className="mt-6 ml-6">Get Started</Button>
+                    </Link>
+                </motion.div>
+            </div>
         )
     }
 
