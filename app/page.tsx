@@ -19,10 +19,10 @@ export default function Home() {
           <div id={"Home"}>
               <Hero />
           </div>
-          <div className="flex items-center justify-center px-36">
+          <div className="flex items-center justify-center px-8 md:px-16 lg:px-36">
               <CourseStats />
           </div>
-          {/*<CareerCoursesClient />*/}
+          <CareerCoursesClient />
 
           <div id={"featuresSection"}>
               <FeaturesSection />

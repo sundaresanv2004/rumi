@@ -145,7 +145,9 @@ export default function Navbar() {
                                 Log in
                             </Button>
                         </Link>
-                        <Button className="ml-4">Sign up</Button>
+                        <Link href={"/auth/signup"}>
+                            <Button className="ml-4">Sign up</Button>
+                        </Link>
                     </div>
                     <div className="-mr-2 flex items-center sm:hidden">
                         <form className="relative mr-2">
@@ -180,7 +182,9 @@ export default function Navbar() {
                                         </Button>
                                     </div>
                                     <div className="mt-3 px-2 space-y-1">
-                                        <Button className="w-full">Sign up</Button>
+                                        <Link href={"/auth/signup"}>
+                                            <Button className="w-full">Sign up</Button>
+                                        </Link>
                                     </div>
                                 </div>
                             </SheetContent>

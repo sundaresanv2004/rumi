@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { useState } from "react"
+import { useRouter } from 'next/navigation'
 
 const signUpSchema = z.object({
     name: z.string().min(2, { message: "Name must be at least 2 characters long" }),
@@ -25,6 +26,7 @@ const signUpSchema = z.object({
 type SignUpFormValues = z.infer<typeof signUpSchema>
 
 const SignUp = () => {
+    const router = useRouter()
     const [isLoading, setIsLoading] = useState(false)
     const { register, handleSubmit, formState: { errors } } = useForm<SignUpFormValues>({
         resolver: zodResolver(signUpSchema),
@@ -36,7 +38,7 @@ const SignUp = () => {
         await new Promise(resolve => setTimeout(resolve, 2000))
         console.log(data)
         setIsLoading(false)
-        // Here you would typically make an API call to create the user account
+        router.push('/questions')
     }
 
     return (
