@@ -13,7 +13,7 @@ export function Scores() {
     ]
 
     return (
-        <Card>
+        <Card className={"w-1/2"}>
             <CardHeader>
                 <CardTitle>Recent Scores</CardTitle>
             </CardHeader>

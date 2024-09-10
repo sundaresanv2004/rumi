@@ -4,7 +4,7 @@ import { Progress } from '@/components/ui/progress'
 
 export function ProgressOverview() {
     return (
-        <Card>
+        <Card className={"w-1/2"}>
             <CardHeader>
                 <CardTitle>Overall Progress</CardTitle>
             </CardHeader>

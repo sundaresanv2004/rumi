@@ -1,7 +1,8 @@
 import React from 'react'
-import { Bell, User } from 'lucide-react'
+import { Bell } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -43,7 +44,7 @@ export function Header() {
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>Profile</DropdownMenuItem>
                         <DropdownMenuItem>Settings</DropdownMenuItem>
-                        <DropdownMenuItem>Log out</DropdownMenuItem>
+                        <DropdownMenuItem><Link href={"/"}>Log out</Link></DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>

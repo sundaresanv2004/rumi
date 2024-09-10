@@ -24,11 +24,11 @@ export function Sidebar() {
     return (
         <div
             className={cn(
-                "flex flex-col h-screen bg-gray-50 border-r border-gray-200 transition-all duration-300 ease-in-out",
+                "flex flex-col h-screen bg-gray-800 border-r border-gray-200 transition-all duration-300 ease-in-out",
                 isCollapsed ? "w-16" : "w-64"
             )}
         >
-            <div className="flex items-center justify-between h-16 px-4 bg-gray-50">
+            <div className="flex items-center justify-between h-16 px-4 bg-gray-800">
                 {!isCollapsed && (
                     <Image
                         src={logo}
@@ -41,7 +41,7 @@ export function Sidebar() {
                     size="icon"
                     onClick={() => setIsCollapsed(!isCollapsed)}
                     aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-                    className="ml-auto"
+                    className="ml-auto text-white"
                 >
                     {isCollapsed ? (
                         <ChevronRight className="h-5 w-5 " />
@@ -58,10 +58,10 @@ export function Sidebar() {
                             key={item.name}
                             variant={active === item.name ? 'secondary' : 'ghost'}
                             className={cn(
-                                'w-full justify-start text-left font-normal',
+                                'w-full justify-start text-left font-normal text-white',
                                 active === item.name && 'font-medium',
                                 isCollapsed ? 'px-2' : 'px-4',
-                                active === item.name ? 'bg-green-200' : 'bg-transparent'
+                                active === item.name ? 'text-black' : 'text-white'
                             )}
                             onClick={() => setActive(item.name)}
                         >
