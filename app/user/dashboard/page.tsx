@@ -1,19 +1,19 @@
 import React from 'react'
-import { Sidebar } from './Sidebar'
-import { Header } from './Header'
-import { CourseContent } from './CourseContent'
-import { Assignments } from './Assignments'
-import { Scores } from './Scores'
-import Review from './Review'
-import { ProgressOverview } from './ProgressOverview'
-import { Charts } from './ChartsDashboard'
-import ComponentRight from './RightSide';
+import { Sidebar } from '../Sidebar'
+import { Header } from '../Header'
+import { CourseContent } from '../CourseContent'
+import { Assignments } from '../Assignments'
+import { Scores } from '../Scores'
+import Review from '../Review'
+import { ProgressOverview } from '../ProgressOverview'
+import { Charts } from '../ChartsDashboard'
+import ComponentRight from '../RightSide';
 import { GraduationCap} from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import BotpressChat from "@/app/dashboard/compounts/BotPressChat";
+import BotpressChat from "@/app/user/compounts/BotPressChat";
 
 export default function Dashboard() {
     return (
