@@ -13,6 +13,7 @@ import { GraduationCap} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
+import BotpressChat from "@/app/dashboard/compounts/BotPressChat";
 
 export default function Dashboard() {
     return (
@@ -86,6 +87,7 @@ export default function Dashboard() {
                     </div>
                 </div>
             </div>
+            <BotpressChat />
         </div>
     )
 }
