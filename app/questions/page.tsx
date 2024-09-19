@@ -102,7 +102,7 @@ export default function CourseRecommender() {
                     <p className="text-lg font-medium text-primary">We&#39;ll use this information to curate a
                         personalized learning path for you.</p>
                     <Button className="mt-6" onClick={() => window.location.reload()}>Start Over</Button>
-                    <Link href={"(user)/dashboard"}>
+                    <Link href={"/dashboard"}>
                         <Button className="mt-6 ml-6">Get Started</Button>
                     </Link>
                 </motion.div>
