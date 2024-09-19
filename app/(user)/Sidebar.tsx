@@ -1,22 +1,30 @@
-'use client'
-import React, { useState } from 'react'
+'use client';
+import React, { useState, useEffect } from 'react'
 import { Home, BookOpen, ClipboardList, GraduationCap, BarChart2, Settings, ChevronLeft, ChevronRight, LogOut } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import {logo} from '@/public/assets/images'
-import Image from "next/image";
+import Image from "next/image"
+import Link from "next/link"
+import { usePathname } from 'next/navigation'
+import {logo} from "@/public/assets/images";
 
 const navItems = [
-    { icon: Home, text: 'Dashboard', href: '/user/dashboard' },
+    { icon: Home, text: 'Dashboard', href: '/dashboard' },
     { icon: BookOpen, text: 'Courses', href: '/courses' },
-    { icon: ClipboardList, text: 'Assignments', href: '/user/assignments' },
+    { icon: ClipboardList, text: 'Assignments', href: '/assignments' },
     { icon: GraduationCap, text: 'Grades', href: '/grades' },
     { icon: BarChart2, text: 'Analytics', href: '/analytics' },
-    { icon: Settings, text: 'Settings', href: '/user/settings' },
+    { icon: Settings, text: 'Settings', href: '/settings' },
 ]
 
 export function Sidebar() {
     const [isCollapsed, setIsCollapsed] = useState(false)
+    const [mounted, setMounted] = useState(false)
+    const pathname = usePathname()
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
 
     return (
         <aside className={cn(
@@ -27,19 +35,20 @@ export function Sidebar() {
                 <div className="flex items-center justify-between h-16 px-4 border-b border-gray-700">
                     {!isCollapsed && (
                         <span className="text-2xl font-bold text-indigo-400">
-                            <Image
-                                src={logo}
-                                alt={'logo'}
-                                height={36}
-                            />
-                        </span>
+              <Image
+                  src={logo}
+                  alt="logo"
+                  width={36}
+                  height={36}
+              />
+            </span>
                     )}
                     <Button
                         variant="ghost"
                         size="icon"
                         onClick={() => setIsCollapsed(!isCollapsed)}
                         aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-                        className="text-gray-400 "
+                        className="text-gray-400"
                     >
                         {isCollapsed ? <ChevronRight className="h-6 w-6" /> : <ChevronLeft className="h-6 w-6" />}
                     </Button>
@@ -48,16 +57,16 @@ export function Sidebar() {
                     <ul className="space-y-2 px-2">
                         {navItems.map((item, index) => (
                             <li key={index}>
-                                <a
+                                <Link
                                     href={item.href}
                                     className={cn(
                                         "flex items-center space-x-2 px-4 py-2 rounded-lg text-gray-400 hover:bg-gray-800 hover:text-white transition-colors",
-                                        window.location.pathname === item.href && "bg-gray-800 text-white"
+                                        mounted && pathname === item.href && "bg-gray-800 text-white"
                                     )}
                                 >
                                     <item.icon className="h-5 w-5" />
                                     {!isCollapsed && <span>{item.text}</span>}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>

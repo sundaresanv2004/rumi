@@ -23,7 +23,7 @@ const Review = () => {
     return (
         <div className="space-y-6">
             <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
-            <h1 className="text-xl font-semibold text-gray-800">Welcome back, John</h1>
+            <h1 className="text-xl font-semibold text-gray-800">Welcome back, Sundar</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <StatCard
                     icon={<GraduationCap className="w-6 h-6 text-gray-800" />}

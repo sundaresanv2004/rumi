@@ -18,7 +18,7 @@ interface Course {
 const courses: Course[] = [
     {
         title: "Front-End Development",
-        description: "Master HTML, CSS, and JavaScript to create stunning user interfaces",
+        description: "Master HTML, CSS, and JavaScript to create stunning (user) interfaces",
         icon: Code,
         students: 1500,
         weeks: 10

@@ -31,7 +31,7 @@ const LogIn = () => {
         await new Promise(resolve => setTimeout(resolve, 2000));
         console.log(data);
         setIsLoading(false);
-        // Here you would typically make an API call to authenticate the user
+        // Here you would typically make an API call to authenticate the (user)
     };
 
     return (
